@@ -1,22 +1,13 @@
 {
-    "name": "g1a/starter",
-    "description": "Template project for PHP libraries.",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Greg Anderson",
-            "email": "greg.1.anderson@greenknowe.org"
-        }
-    ],
+    "name": "aaronbauman/bbmon",
     "autoload":{
         "psr-4":{
-            "CustomizeProject\\": "customize",
-            "ExampleProject\\": "src"
+            "Bbmon\\": "src"
         }
     },
     "autoload-dev":{
         "psr-4":{
-            "ExampleProject\\": "tests/src"
+            "Bbmon\\": "tests/src"
         }
     },
     "require": {

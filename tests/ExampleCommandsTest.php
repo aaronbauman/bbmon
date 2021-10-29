@@ -18,7 +18,7 @@ class ExampleCommandsTest extends TestCase implements CommandTesterInterface
     public function setUp()
     {
         // Store the command classes we are going to test
-        $this->commandClasses = [ \ExampleProject\Cli\ExampleCommands::class ];
+        $this->commandClasses = [ \ExampleProject\Cli\BbmonCommands::class ];
         $this->setupCommandTester('TestFixtureApp', '1.0.1');
     }
 

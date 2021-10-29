@@ -25,12 +25,12 @@ $classLoader = require $autoloaderPath;
 
 // Customization variables
 $argv = $_SERVER['argv'];
-$appName = "ExampleProject";
+$appName = "Bbmon";
 $appVersion = trim(file_get_contents(__DIR__ . '/VERSION'));
-$commandClasses = [ \ExampleProject\Cli\ExampleCommands::class ];
-$selfUpdateRepository = 'g1a/starter';
-$configPrefix = 'EXAMPLEPROJECT';
-$configFilePath = getenv($configPrefix . '_CONFIG') ?: getenv('HOME') . '/.example-project/example-project.yml';
+$commandClasses = [ \Bbmon\Cli\BbmonCommands::class ];
+$selfUpdateRepository = 'aaronbauman/bbmon';
+$configPrefix = 'Bbmon';
+$configFilePath = getenv($configPrefix . '_CONFIG') ?: getenv('HOME') . '/.bbmon/bbmon.yml';
 
 // Define our Runner, and pass it the command classes we provide.
 $runner = new \Robo\Runner($commandClasses);
