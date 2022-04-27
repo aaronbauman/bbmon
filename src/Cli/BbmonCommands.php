@@ -71,6 +71,9 @@ class BbmonCommands extends Tasks
 
   protected function getPipeJobs($pipes) {
     foreach ($pipes as $pipe) {
+      if (empty($pipe->state) || empty($pipe->state->result)) {
+        continue;
+      }
       if (empty($jobs[$pipe->target->selector->type . '::' . $pipe->target->selector->pattern])) {
         $jobs[$pipe->target->selector->type . '::' . $pipe->target->selector->pattern] = [
           'success' => $pipe->state->result->name == 'SUCCESSFUL' ? 1 : 0,
